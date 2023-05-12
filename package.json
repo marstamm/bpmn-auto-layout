@@ -2,7 +2,10 @@
   "name": "@marstamm/bpmn-auto-layout",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "type": "module",
   "scripts": {
     "lint": "eslint .",
