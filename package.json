@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "lint": "eslint .",
     "test": "mocha --experimental-specifier-resolution=node"
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bpmn-moddle": "^8.0.1",
+    "diagram-js": "^12.1.0",
     "min-dash": "^4.1.1"
   },
   "devDependencies": {

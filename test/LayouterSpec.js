@@ -6,7 +6,9 @@ describe('Layouter', function() {
   it('should layout a process', async function() {
     const xml = fs.readFileSync('test/diagrams/simple.xml', 'utf8');
 
-    await layoutProcess(xml);
+    const result = await layoutProcess(xml);
+
+    fs.writeFileSync('test/diagrams/simple-generated.xml', result, 'utf8');
   });
 
 });
