@@ -9,7 +9,7 @@ describe('Layout', function() {
 
     const iit = getIt(filename);
 
-    iit('should layout' + filename, async function() {
+    iit('should layout ' + filename, async function() {
       const xml = fs.readFileSync('test/diagrams/' + filename, 'utf8');
 
       const result = await layoutProcess(xml);
