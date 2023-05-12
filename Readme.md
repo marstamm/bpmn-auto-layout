@@ -17,8 +17,6 @@ const layoutedDiagram = await layoutProcess(diagram);
 
 These are the current limitations: 
 - Pools
-- Subprocesses
-- Boundary Events
 - Data/Message Flows and Objects, Data Stores
 
 ## Development
