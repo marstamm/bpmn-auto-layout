@@ -1,14 +1,19 @@
 import fs from 'fs';
 import { layoutProcess } from '../lib';
 
-describe('Layouter', function() {
+describe('Layout', function() {
 
-  it('should layout a process', async function() {
-    const xml = fs.readFileSync('test/diagrams/simple.xml', 'utf8');
+  const filenames = fs.readdirSync('test/diagrams');
 
-    const result = await layoutProcess(xml);
+  filenames.forEach(filename => {
 
-    fs.writeFileSync('test/diagrams/simple-generated.xml', result, 'utf8');
+    it('should layout' + filename, async function() {
+      const xml = fs.readFileSync('test/diagrams/' + filename, 'utf8');
+
+      const result = await layoutProcess(xml);
+
+      fs.writeFileSync('test/generated/' + filename, result, 'utf8');
+    });
   });
 
 });
